@@ -1,5 +1,6 @@
 
 -- Version: Lua 5.4.1
+-- Copyright © 2021 TechShare Inc. All Rights Reserved.
 --0.ライブラリのインポートと関数定義
 --[[
 	data[] = [ id   |     data     ]
@@ -16,10 +17,11 @@
 
 --移動の関数を定義
 function MovL_xyzr(x,y,z,r)
-
+    now = GetPose()
+    
 	P = {}
 	P["tool"] = 0
-	P["armOrientation"]=right
+	P["armOrientation"]=now["armOrientation"]
 	P["load"]=0.000000 
 	P["coordinate"]={x, y, z, r, 0.000000, 0.000000 }
 	P["user"]=0.000000
